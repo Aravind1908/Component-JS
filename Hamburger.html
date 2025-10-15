@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Hamburger Menu</title>
+<style>
+  nav {
+    background: #333;
+    color: white;
+    padding: 10px;
+  }
+  .menu {
+    display: none;
+    flex-direction: column;
+  }
+  .menu a {
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+  }
+  .hamburger {
+    cursor: pointer;
+    font-size: 25px;
+  }
+</style>
+</head>
+<body>
+  <nav>
+    <span class="hamburger" id="menuBtn">☰ Menu</span>
+    <div class="menu" id="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+<script>
+  const menuBtn = document.getElementById("menuBtn");
+  const menu = document.getElementById("menu");
+  menuBtn.addEventListener("click", () => {
+    menu.style.display = (menu.style.display === "flex") ? "none" : "flex";
+  });
+</script>
+</body>
+</html>
