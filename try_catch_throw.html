@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Try Catch Throw Example</title>
+</head>
+<body>
+  <h2>Try, Catch, Throw Example</h2>
+  <button onclick="checkAge()">Check Age</button>
+  <p id="result"></p>
+
+  <script>
+    function checkAge() {
+      const result = document.getElementById("result");
+      const age = prompt("Enter your age:");
+
+      try {
+        if (age === "" ) {
+          throw "Age is required!";
+        }
+        if (isNaN(age)) {
+          throw "Please enter a number!";
+        }
+        if (age < 18) {
+          throw "You must be at least 18 years old!";
+        }
+
+        result.textContent = "✅ Access granted!";
+      } 
+
+      
+      catch (error) {
+        result.textContent = "❌ Error: " + error;
+      }
+    }
+  </script>
+</body>
+</html>
